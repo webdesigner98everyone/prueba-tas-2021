@@ -8,7 +8,20 @@ function onRequestHandler(){
         console.log(data);
         const HTMLResponse = document.querySelector("#app");
 
-        const tpl = data.map((product)=>`<li>${product.name} <br> ${product.price}</li>`);
+        // const tpl = data.map((product)=>`<h3>${product.id}. ${product.name}</h3> <img src=${product.img} alt="imagen del producto"> <p><b>Descripción: </b>${product.description}</p> <p><b>Precio: </b>$${product.price}</p> <button class="boton boton--primario" type="submit">Enviar A Carrito</button>`);
+        
+        const tpl = data.map((product) => `
+        <h3>${product.id}. ${product.name}</h3>
+        <div class="producto">
+            <img class="producto__imagen" src=${product.img} alt="imagen del producto">
+            <div class="producto__contenido">
+                <p><b>Descripción: </b>${product.description}</p>
+                <p><b>Precio: </b>$${product.price}</p>
+                <form class="formulario"> 
+                   <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>`)
         HTMLResponse.innerHTML = `<ul>${tpl}</ul>`;
     }
 }

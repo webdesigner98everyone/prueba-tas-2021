@@ -13,6 +13,7 @@
     --AzulClaro: #1BBAE8;
     --AzulOscuro:#1F618D;
     --Rojo:#E74C3C;
+    --fuente: 'Staatliches', cursive;
 }
 
 html{
@@ -41,7 +42,7 @@ h1, h2, h3, h4{
     line-height: 1.2;
 }
 h1{
-    font-size: 5.5rem;
+    font-size: 5.0rem;
 }
 h2{
     font-size: 4rem;
@@ -462,6 +463,37 @@ img{
     .campo__field--textarea{
         height: 20rem;
     }
+
+/* estilo producto */
+    @media (min-width:768px ) {
+        .producto{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+        } 
+    }
+/* estilo formulario producto */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .formulario__submit {
+    background-color: var(--AzulOscuro);
+    border: none;
+    font-size: 2rem;
+    padding: 2rem;
+    font-family: var(--fuente);
+    transition: background-color .3s ease;
+    grid-column: 1 / 3;
+    /* transition: font-size .3s ease; animacion al tamaño del btn*/
+  }
+  /* estilo btn */
+  .formulario__submit:hover {
+    /* font-size: 2.4rem; */
+    cursor: pointer;
+    background-color: var(--grisOcsuro);
+  }
 
     
 
