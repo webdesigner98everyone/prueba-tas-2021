@@ -479,7 +479,7 @@ img{
     gap: 2rem;
   }
   .formulario__submit {
-    background-color: var(--AzulOscuro);
+    background-color: var(--AzulClaro);
     border: none;
     font-size: 2rem;
     padding: 2rem;
